@@ -1,0 +1,39 @@
+{
+  "build": {
+    "devPath": "../FrontendDevNew",
+    "distDir": "../FrontendDevNew",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "tauri-dash",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "title": "pulse dash",
+        "width": 700,
+        "height": 750
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.tauri.dev",
+      "icon": [
+        
+        "icons/icon.ico"
+      ]
+    }
+  }
+}
