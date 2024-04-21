@@ -4,7 +4,8 @@ body{
     height: 100dvh;
     z-index: -1;
     padding: 0.5%;
-    background-color: aliceblue;
+    background-color:rgb(000,000,150);
+    color: aliceblue;
 }
 
 .main{
@@ -17,33 +18,31 @@ body{
 
 .header{
     display: flex;
-    padding-top: 5%;
+    padding-top: 0.2%;
+    font-size: small;
+    color: aliceblue;
 }
 
 .hero{
-    padding-top: 1%;
+    padding-top: 14.5%;
     display: flex;
     flex-direction: column;
+    color: aliceblue;
 }
 
 .buttonmain{
-    padding-top: 15%;
+    padding-top: 1.25dvh;
 }
 
 .button{
-    position: absolute;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-    width: 325px;
-    height: 81px;
+    width: 17vw;
+    height: 8vh;
     color: rgb(202, 202, 202);
 
     border-color:#00002b;
-    border-radius: 10px;
-    letter-spacing: 4px;
-    font-size: 2.5rem;
+    border-radius: 1.2dvb;
+    letter-spacing: 0.2vw;
+    font-size: 1.7vw;
     font-weight: 465;
     background-color: #000f52;
     outline: none;
@@ -56,6 +55,7 @@ body{
   box-shadow: inset 325px 0 0 0 #e6fffa;
    color:#0e0000;
    border-color:#03ee03;
+   border-width: 0.13cap;
 
   }
 
