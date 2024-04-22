@@ -22,16 +22,17 @@ body{
 
 .header{
     display: flex;
-    padding-top: 0.2%;
+    padding-top: 0.1%;
     font-size: small;
     color: aliceblue;
 }
 
 .hero{
-    padding-top: 14.5%;
+    padding-top: 20.0%;
     display: flex;
     flex-direction: column;
     color: aliceblue;
+    font-style: italic;
 }
 
 .buttonmain{
@@ -40,13 +41,13 @@ body{
 
 .button{
     width: 17vw;
-    height: 8vh;
+    height: 7vh;
     color: rgb(202, 202, 202);
 
     border-color:#00002b;
     border-radius: 1.2dvb;
     letter-spacing: 0.2vw;
-    font-size: 1.7vw;
+    font-size: 1.8vw;
     font-weight: 465;
     background-color: #000f52;
     outline: none;
