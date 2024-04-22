@@ -22,16 +22,19 @@
         "width": 650,
         "height": 720,
         "resizable": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "center": true
       },
 
       {
-        "title": "pre-loader",
+        "title": "splashscreen",
         "width": 400,
-        "height": 200,
+        "height": 400,
         "decorations": false,
         "url": "splashscreen.html",
-        "label": "preload"
+        "label": "splashscreen",
+        "center": true
+
         }
 
 
