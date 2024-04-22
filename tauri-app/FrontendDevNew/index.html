@@ -1,48 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en">    
+  
     <!-- Section 1 -- MAIN -->
+
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>bp Pulse Dash</title>
         <link rel="stylesheet" href="css/index.css" />
     </head>
+
     <body>
-    <div class="main">
-        <header class="header">
-            <h1>bp Pulse Dashboard</h1>
-        </header>
+        <div class="main">
+            <img src="icons\bp pulse_wordmark_primary_EOM_RGB.png" width="15%">
+            <header class="header">
+                <h1>Pulse Dashboard</h1>
+            </header>
 
-        <div class="hero">
-            <p>This is a bp Pulse app. Authorized access only. Please Login to continue.</p>
+            <div class="hero">
+                <p>This is a bp Pulse app authorized access only</p>
+                <p>--Please login to continue--</p>
+            </div>
+
+            <div class="buttonmain">
+                <form action="login.html">
+                    <button class="button">bp Staff Login</button>
+                </form>
+
+            </div>
+
+            <footer class="footer">
+
+                <div class="detail">
+                    <h6>Morgan Haining - Pulse R&D </h6>
+                </div>
+                <div class="help">
+                    <h6 href="www.google.com">Help - v.1.0.2</h6>
+                </div>
+
+            </footer>
         </div>
-
-        <div class="buttonmain">
-            <form action="login.html">
-                <button class="button">bp Staff Login</button>
-            </form>
-
-    </div>
-
-
-        <footer class="footer">
-
-            <div class="detail">
-                <h6>Morgan Haining - Pulse R&D </h6>
-            </div>
-            <div class="help">
-                <h6 href="/">Help - v.1.0.2</h6>
-            </div>
-
-        </footer>
-
-    
         <script src="javascript/index_script.js"></script>
     </body>
     <!-- *END* -->
 
     <!-- Section 2 -- Overlay -->
+
     <head>
         <link rel="stylesheet" href="css/overlay.css" />
     </head>
@@ -52,55 +55,56 @@
             <a href></a>
         </header>
         <script>
-                    function on() {
-                        document.getElementById("overlay").style.display = "block";
-                    }
-        
-                    function off() {
-                        document.getElementById("overlay").style.display = "none";
-                        console.log('off')
-                    }
-                </script>
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+            console.log('off')
+        }
+    </script>
 
         <style>
-                    #overlay {
-                        position: fixed;
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background-color: rgba(0, 0, 0, 0.84);
-                        z-index: 1;
-                        cursor: pointer;
-                    }
-                </style>
+        #overlay {
+            position: fixed;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.84);
+            z-index: 1;
+            cursor: pointer;
+        }
+    </style>
 
         <script>
-                    let inactivityTime = function () {
-                        let time;
-                        window.onload = resetTimer;
-                        document.onmousemove = resetTimer;
-                        document.onkeypress = resetTimer;
-                        function logout() {
-                            document.getElementById("overlay").style.display = "block";
-                        }
-                        if (logout > 6) { app.quit(); }
-        
-                        function resetTimer() {
-                            clearTimeout(time);
-                            time = setTimeout(logout, 30000)
-                        }
-                    };
-                    window.onload = function () {
-                        inactivityTime();
-                    }
-                </script>
+        let inactivityTime = function () {
+            let time;
+            window.onload = resetTimer;
+            document.onmousemove = resetTimer;
+            document.onkeypress = resetTimer;
+            function logout() {
+                document.getElementById("overlay").style.display = "block";
+            }
+            if (logout > 6) { app.quit(); }
+
+            function resetTimer() {
+                clearTimeout(time);
+                time = setTimeout(logout, 30000)
+            }
+        };
+        window.onload = function () {
+            inactivityTime();
+        }
+    </script>
 
         <div id="overlay" onclick="off()">
             <div class="overlay">
+
                 <body>
                     <div class="main-wrapper">
                         <div class="sphere-wrapper"></div>
@@ -111,4 +115,5 @@
         </div>
 
     </body>
+
 </html>
