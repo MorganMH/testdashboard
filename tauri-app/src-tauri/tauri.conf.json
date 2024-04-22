@@ -23,7 +23,18 @@
         "height": 720,
         "resizable": true,
         "fullscreen": false
-      }
+      },
+
+      {
+        "title": "pre-loader",
+        "width": 400,
+        "height": 200,
+        "decorations": false,
+        "url": "splashscreen.html",
+        "label": "preload"
+        }
+
+
     ],
     "security": {
       "csp": null

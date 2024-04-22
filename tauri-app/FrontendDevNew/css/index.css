@@ -6,7 +6,7 @@ body{
     padding: 0.5%;
     background-color:rgb(000,000,150);
     color: aliceblue;
-    animation: fade-in 9s;
+    animation: fade-in 6s;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;

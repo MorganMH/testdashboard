@@ -1,3 +1,5 @@
+const invoke = window.__TAURI__.invoke
+
 const button_redirect = document.getElementById("button_redirect");
 button_redirect.addEventListener("click", (e) => {
 window.location.href = "login.html";
