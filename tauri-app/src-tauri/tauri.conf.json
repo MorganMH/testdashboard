@@ -19,8 +19,8 @@
     "windows": [
       {
         "title": "pulse dashboard",
-        "width": 700,
-        "height": 750,
+        "width": 650,
+        "height": 720,
         "resizable": true,
         "fullscreen": false
       }
