@@ -1,50 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css" />
 </head>
+
 <body>
     <header>
+        <div class="bplogo"></div>
         <div class="popup"></div>
     </header>
 
     <main>
         <section class="main_top">
-            <div class="saftey">
-                <p>saftey</p>
-            </div>
-               
-            <div class="margin">
-                <p>margin</p>
+            <div class="rbox" id="saftey">
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                <canvas id="Chart1" style="width:100%"></canvas>
+
+                <script>
+                    const xValues1 = ["LCI Incidents ", "Cyber Barometer", "Cyber Incidents", "Saftey Compliance", "LEFT TO IMPROVE"];
+                    const yValues1 = [40, 14, 32, 20, 40];
+                    const barColors1 = [
+                        "#b91d47",
+                        "#00aba9",
+                        "#2b5797",
+                        "#e8c3b9",
+                        "#000000"
+                    ];
+
+                    new Chart("Chart1", {
+                        type: "pie",
+                        data: {
+                            labels: xValues1,
+                            datasets: [{
+                                backgroundColor: barColors1,
+                                data: yValues1
+                            }]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: "Cyber & Saftey Targets"
+                            }
+                        }
+                    });
+                </script>
+
+                <p>LTO: Saftey and Cyber Rating</p>
             </div>
 
-            <div class="growth">
-                <p>growth</p>
+            <div class="rbox" id="margin">
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                <canvas id="Chart2" style="width:100%"></canvas>
+
+                <script>
+                    const xValues2 = ["£/SLOW", "£/FAST", "£/ULTRA", "£/AVG", "Other"];
+                    const yValues2 = [30, 49, 70, 40, 22];
+                    const barColors2 = [
+                        "#b91d47",
+                        "#00aba9",
+                        "#2b5797",
+                        "#e8c3b9",
+                        "#1e7145"];
+
+                    new Chart("Chart2", {
+                        type: "bar",
+                        data: {
+                            labels: xValues2,
+                            datasets: [{
+                                backgroundColor: barColors2,
+                                data: yValues2
+                            }]
+                        },
+                        options: {
+                            legend: { display: false },
+                            title: {
+                                display: true,
+                                text: "Margin per KwH / Speed"
+                            }
+                        }
+                    });
+                </script>
+                <p>Capital Dicipline: Margin-[TCC / GM]</p>
             </div>
 
-            <div class="capex">
-                <p>capex</p>
+            <div class="rbox" id="growth">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+
+                <script>
+                    const xValues3 = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+                    const yValues3 = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+                    new Chart("myChart3", {
+                        type: "line",
+                        data: {
+                            labels: xValues3,
+                            datasets: [{
+                                fill: false,
+                                lineTension: 0,
+                                backgroundColor: "rgba(150,255,0)",
+                                borderColor: "rgba(150,255,0,0.2)",
+
+                                data: yValues3
+                            }]
+                        },
+                        options: {
+                            legend: { display: false },
+                            scales: { yAxes: [{ ticks: { min: 6, max: 16 } }], }
+                        }
+                    });
+                </script>
+
+
+                <p>Network Growth: Rapid & UCF Bays</p>
+            </div>
+
+            <div class="rbox" id="capex">
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                <canvas id="Chart5" style="width:100%"></canvas>
+
+                <script>
+                    const xValues5 = ["Charger Hardware", "Instilation", "Software", "Maintanace", "Operations"];
+                    const yValues5 = [140, 74, 22, 25, 17];
+                    const barColors5 = [
+                        "#FA0000",
+                        "#4df52",
+                        "#2bbc27",
+                        "#e46549",
+                        "#004500"
+                    ];
+
+                    new Chart("Chart5", {
+                        type: "doughnut",
+                        data: {
+                            labels: xValues5,
+                            datasets: [{
+                                backgroundColor: barColors5,
+                                data: yValues5
+                            }]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: "Cyber & Saftey Targets"
+                            }
+                        }
+                    });
+                </script>
+
+
+                <p>Capital Efficency: Cost - capex / kW</p>
             </div>
 
         </section>
 
         <section class="main_bottom">
-            <div class="demand">
-                <p>demand</p>
+            <div class="rbox" id="demand">
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                <canvas id="myChart6" style="width:100%;max-width:600px"></canvas>
+
+                <script>
+                    const xValues6 = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+                    new Chart("myChart6", {
+                        type: "line",
+                        data: {
+                            labels: xValues6,
+                            datasets: [{
+                                data: [860, 1140, 1060, 1060, 1070, 1110, 3330, 2210, 1830, 4478],
+                                borderColor: "red",
+                                fill: false
+                            }, {
+                                data: [1600, 1700, 1700, 1900, 2000, 4300, 4000, 5000, 6000, 7000],
+                                borderColor: "green",
+                                fill: false
+                            }, {
+                                data: [300, 700, 2000, 5000, 6000, 7000, 2000, 1000, 200, 100],
+                                borderColor: "blue",
+                                fill: false
+                            }]
+                        },
+                        options: {
+                            legend: { display: false }
+                        }
+                    });
+                </script>
+
+                <p>Sessions Growth: Session / bay / week</p>
             </div>
 
-            <div class="uptime">
-                <p>uptime</p>
+            <div class="rbox" id="uptime">
+                <div class="multiplechart">
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                    <script>
+                        const xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+                        new Chart("myChart", {
+                            type: "line",
+                            data: {
+                                labels: xValues,
+                                datasets: [{
+                                    data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+                                    borderColor: "red",
+                                    fill: false
+                                }, {
+                                    data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                                    borderColor: "green",
+                                    fill: false
+                                }, {
+                                    data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+                                    borderColor: "blue",
+                                    fill: false
+                                }]
+                            },
+                            options: {
+                                legend: { display: false }
+                            }
+                        });
+                    </script>
+                </div>
+                <p>Network Reliability: Charger Uptime - %</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <section>
-        </section>
-    </footer>
 </body>
+
 </html>
