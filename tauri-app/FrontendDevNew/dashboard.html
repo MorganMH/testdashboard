@@ -33,6 +33,7 @@
                     ];
 
                     new Chart("Chart1", {
+
                         type: "pie",
                         data: {
                             labels: xValues1,
@@ -45,8 +46,9 @@
                             title: {
                                 display: true,
                                 text: "Cyber & Saftey Targets"
-                            }
-                        }
+                            },
+                        },
+
                     });
                 </script>
 
@@ -55,12 +57,12 @@
 
             <div class="rbox" id="margin">
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
                 <canvas id="Chart2" style="width:100%"></canvas>
 
                 <script>
                     const xValues2 = ["£/SLOW", "£/FAST", "£/ULTRA", "£/AVG", "Other"];
-                    const yValues2 = [30, 49, 70, 40, 22];
+                    const yValues2 = [21, 28, 49, 31.9, 11.5];
                     const barColors2 = [
                         "#b91d47",
                         "#00aba9",
@@ -81,8 +83,8 @@
                             legend: { display: false },
                             title: {
                                 display: true,
-                                text: "Margin per KwH / Speed"
-                            }
+                                text: "Margin per KwH / Speed pence*"
+                            },
                         }
                     });
                 </script>
@@ -90,7 +92,7 @@
             </div>
 
             <div class="rbox" id="growth">
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
                 <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
 
                 <script>
@@ -113,7 +115,11 @@
                         options: {
                             legend: { display: false },
                             scales: { yAxes: [{ ticks: { min: 6, max: 16 } }], }
-                        }
+                        },
+                        title: {
+                            display: true,
+                            text: "Daily EVSE additions / days*"
+                        },
                     });
                 </script>
 
@@ -123,7 +129,7 @@
 
             <div class="rbox" id="capex">
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
                 <canvas id="Chart5" style="width:100%"></canvas>
 
                 <script>
@@ -149,7 +155,7 @@
                         options: {
                             title: {
                                 display: true,
-                                text: "Cyber & Saftey Targets"
+                                text: "Capital Efficencys of Delievery"
                             }
                         }
                     });
@@ -164,7 +170,6 @@
         <section class="main_bottom">
             <div class="rbox" id="demand">
 
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
                 <canvas id="myChart6" style="width:100%;max-width:600px"></canvas>
 
                 <script>
@@ -200,7 +205,6 @@
             <div class="rbox" id="uptime">
                 <div class="multiplechart">
 
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
                     <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
                     <script>
@@ -228,6 +232,7 @@
                                 legend: { display: false }
                             }
                         });
+
                     </script>
                 </div>
                 <p>Network Reliability: Charger Uptime - %</p>
