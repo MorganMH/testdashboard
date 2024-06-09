@@ -16,3 +16,4 @@ loginButton.addEventListener("click", (e) => {
         loginErrorMsg.style.opacity = 1;
     }
 })
+//This would use a tauri api, then be send an encrypted api post request to bp staff db.
